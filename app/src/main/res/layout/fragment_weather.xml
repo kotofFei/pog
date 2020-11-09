@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blue"
+    tools:context=".WeatherFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_height="718dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- TODO: Update blank fragment layout -->
+            <TextView
+                android:id="@+id/Zagolovok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/blank_fragment_weather"
+                android:textAlignment="center"
+                android:textSize="23sp"
+                app:layout_constraintEnd_toStartOf="@id/OpisaniePogodi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/OpisaniePogodi"
+                android:layout_width="411dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="70dp"
+                android:text="@string/description"
+                android:textSize="19sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Zagolovok" />
+
+
+            <TextView
+                android:id="@+id/strokaOpisaniya"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text=""
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/OpisaniePogodi"
+                tools:layout_editor_absoluteX="70dp" />
+
+            <TextView
+                android:id="@+id/Gorod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@id/strokaOpisaniya" />
+
+
+            <TextView
+                android:id="@+id/TempInCelciya"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/temperatura"
+                android:layout_marginBottom="20dp"
+                android:textSize="19sp"
+                app:layout_constraintTop_toBottomOf="@id/Gorod" />
+
+            <TextView
+                android:id="@+id/templ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tempa"
+                android:layout_marginBottom="20dp"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/TempInCelciya" />
+
+            <TextView
+                android:id="@+id/temperatura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginLeft="70dp"
+                android:text=""
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@id/templ"
+                app:layout_constraintTop_toBottomOf="@id/TempInCelciya" />
+
+            <TextView
+                android:id="@+id/coz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/coza"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/temperatura" />
+
+            <TextView
+                android:id="@+id/for_skin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginLeft="70dp"
+                android:text=""
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@id/coz"
+                app:layout_constraintTop_toBottomOf="@id/temperatura" />
+
+            <TextView
+                android:id="@+id/noch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/night"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/for_skin" />
+
+            <TextView
+                android:id="@+id/at_night"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginLeft="70dp"
+                android:text=""
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@id/noch"
+                app:layout_constraintTop_toBottomOf="@id/for_skin" />
+
+            <TextView
+                android:id="@+id/den"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/day"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/noch" />
+
+            <TextView
+                android:id="@+id/at_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginLeft="70dp"
+                android:text=""
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@id/den"
+                app:layout_constraintTop_toBottomOf="@id/noch" />
+
+            <TextView
+                android:id="@+id/davl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/davlenie"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/den" />
+
+            <TextView
+                android:id="@+id/davlenie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginLeft="70dp"
+                android:text=""
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@id/davl"
+                app:layout_constraintTop_toBottomOf="@id/den" />
+
+            <TextView
+                android:id="@+id/vlaga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vlaznost"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/davl" />
+
+            <TextView
+                android:id="@+id/vlaznost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginLeft="70dp"
+                android:text=""
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@id/vlaga"
+                app:layout_constraintTop_toBottomOf="@id/davl" />
+
+            <ImageView
+                android:id="@+id/Giff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/vlaga" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</FrameLayout>

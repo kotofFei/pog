@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Погода</string>
+    <string name="weather">Погода</string>
+    <string name="country">Город</string>
+
+    <string name="blank_fragment_city">Города</string>
+    <string name="blank_fragment_weather">Погода</string>
+
+    <string name="description">Описание</string>
+
+    <string name="temperatura">Температура в градусах цельсия</string>
+
+    <string name="tempa">На данный момент:</string>
+    <string name="coza">По ощущения:</string>
+    <string name="night">Ночью:</string>
+    <string name="day">Днем:</string>
+    <string name="add">Добавить город</string>
+
+    <string name="davlenie">Давление в атмосфере:</string>
+    <string name="vlaznost">Влажность в атмосфере:</string>
+
+    <string name="new_city">Название города</string>
+</resources>
