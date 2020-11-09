@@ -86,6 +86,7 @@ class WeatherFragment : Fragment() {
 
         val view: View = inflater.inflate(R.layout.fragment_weather, container, false)
         var opisanie = view?.findViewById<TextView>(R.id.strokaOpisaniya)
+        var sovet = view?.findViewById<TextView>(R.id.strokasoveta)
         var temperatura = view.findViewById<TextView>(R.id.temperatura)
         var for_skin = view?.findViewById<TextView>(R.id.for_skin)
         var at_day = view?.findViewById<TextView>(R.id.at_day)
@@ -97,6 +98,7 @@ class WeatherFragment : Fragment() {
 
         Gorod?.text = MainCity
         opisanie?.text =  api.Weather.opisanie
+        sovet?.text =  api.Weather.opisanie
         temperatura?.text = api.Weather.main.temperatura
         for_skin?.text = api.Weather.main.for_skin
         at_day?.text = api.Weather.main.at_day
@@ -106,18 +108,25 @@ class WeatherFragment : Fragment() {
 
         when (api.Weather.anim) {"Thunderstorm" -> {
                 Glide.with(this@WeatherFragment).load(R.drawable.storm).into(imageView)
+            strokasoveta.text = "Следует оставаться дома."
             } "Drizzle" -> {
             Glide.with(this@WeatherFragment).load(R.drawable.dozd).into(imageView)
+            strokasoveta.text = "Следует надеть непромокаему одежду"
         } "Rain" -> {
             Glide.with(this@WeatherFragment).load(R.drawable.dozd).into(imageView)
+            strokasoveta.text = "Следует надеть непромокаему одежду"
         }  "Clouds" -> {
             Glide.with(this@WeatherFragment).load(R.drawable.oblaka).into(imageView)
+            opisanie.text = "Следует взять с собой зонтик"
         } "Clear" -> {
             Glide.with(this@WeatherFragment).load(R.drawable.solnce).into(imageView)
+            strokasoveta.text = "Благосклонная для прогулок погода"
         } "Fog" -> {
             Glide.with(this@WeatherFragment).load(R.drawable.tuman).into(imageView)
+            strokasoveta.text = "Будьте аккуратны возле дорог"
         }"Snow" -> {
             Glide.with(this@WeatherFragment).load(R.drawable.sneg).into(imageView)
+            strokasoveta.text = "Отлична погода для игры в снежки"
         }
         }
         return view
